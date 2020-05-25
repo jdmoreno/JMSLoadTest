@@ -7,6 +7,7 @@ The tool has three usages:
 - JMS consumer
 - CSV loader and trigger a set JMS producers and JMS consumers bese on the information in the CSV
 
+<pre><code>
 ## Usage
 :: Name:    Reference Data Validator - Test7
 :: Purpose: Validate reference tables in CSV format
@@ -41,5 +42,6 @@ start "JMS Consumer" CMD /K java -classpath %JAR-FOLDER%\%JAR-FILE%;tibjms.jar %
 -time 60 ^
 -threads 1 ^
 -connections 1
+</code></pre>
 
 ## Configuration
