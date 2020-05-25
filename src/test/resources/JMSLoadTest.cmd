@@ -1,7 +1,7 @@
 :: Name:    Reference Data Validator - Test7
 :: Purpose: Validate reference tables in CSV format
 
-REM @ECHO OFF
+@ECHO OFF
 SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 
 set JAR-FOLDER=..\..\..\target
@@ -10,6 +10,7 @@ SET PRODUCER-CLASS=eps.platform.tools.jms.JMSProducer
 SET CONSUMER-CLASS=eps.platform.tools.jms.JMSConsumer
 
 :: Launch Producer
+:PRODUCER
 start "JMS Producer" CMD /K java -classpath %JAR-FOLDER%\%JAR-FILE%;tibjms.jar %PRODUCER-CLASS% ^
 -server tcp://ems.test:7222 ^
 -user admin ^
@@ -23,6 +24,7 @@ start "JMS Producer" CMD /K java -classpath %JAR-FOLDER%\%JAR-FILE%;tibjms.jar %
 -rate 200
 
 :: Launch Consumer
+:CONSUMER
 start "JMS Consumer" CMD /K java -classpath %JAR-FOLDER%\%JAR-FILE%;tibjms.jar %CONSUMER-CLASS% ^
 -server tcp://ems.test:7222 ^
 -user admin ^
