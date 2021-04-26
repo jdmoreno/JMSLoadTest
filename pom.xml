@@ -23,7 +23,7 @@
 		<commons-lang3.version>3.8.1</commons-lang3.version>          
         <commons-cli.version>1.4</commons-cli.version>
 		<commons-csv.version>1.8</commons-csv.version>						
-        <commons-io.version>2.6</commons-io.version>						
+        <commons-io.version>2.7</commons-io.version>						
 		<junit.version>5.4.0</junit.version>
 		<assertj.version>3.11.1</assertj.version>
 		<jms.version>2.0.1</jms.version>
